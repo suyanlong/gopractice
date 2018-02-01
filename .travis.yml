@@ -1,0 +1,10 @@
+language: go
+go:
+  - 1.9
+env:
+  - GOMAXPROCS=4
+install:
+  - go get github.com/sirupsen/logrus
+
+script:
+  - go build examples/log.go
