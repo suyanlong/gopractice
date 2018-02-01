@@ -4,6 +4,7 @@ import "fmt"
 
 func main() {
 	count := 100
+	// Add for label and break for loop
 kk:
 	for {
 		fmt.Println(count)

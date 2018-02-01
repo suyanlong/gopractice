@@ -24,10 +24,10 @@ func testSleep() {
 }
 
 func testGoSched() {
-	for i := 0; i < 100; i++ {
+	for i := 0; i < 10; i++ {
 		fmt.Println(time.Now().Unix())
 		//time.Sleep(time.Duration(1) * time.Second)
-		//runtime.Gosched()
+		runtime.Gosched()
 		log.WithFields(log.Fields{
 			"NumCPU":     runtime.NumCPU(),
 			"Version":    runtime.Version(),
@@ -38,6 +38,7 @@ func testGoSched() {
 func main() {
 	//go say("world")
 	//say("hello")
+	runtime.GOMAXPROCS(runtime.NumCPU())
 	testGoSched()
 	testSleep()
 }

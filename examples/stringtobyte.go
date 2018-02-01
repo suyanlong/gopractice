@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	//类型转换
+	// type into
 	str := string("123你好")
 	data := []byte(str)
 	fmt.Println(str)
