@@ -8,3 +8,4 @@ install:
 
 script:
   - go build examples/log.go
+  - go build examples/break.go
