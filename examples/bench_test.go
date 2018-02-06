@@ -72,6 +72,24 @@ func BenchmarkTest_mutex_int64(b *testing.B) {
 	}
 }
 
+func BenchmarkTest_RwMutex_int64(b *testing.B) {
+	var kk int64 = 0
+	mu := sync.RWMutex{}
+	go func() {
+		for i := 0; i < b.N; i++ {
+			mu.Lock()
+			kk = int64(i)
+			mu.Unlock()
+		}
+	}()
+
+	for i := 0; i < b.N; i++ {
+		mu.Lock()
+		kk = int64(i)
+		mu.Unlock()
+	}
+}
+
 func BenchmarkTest_atomic(b *testing.B) {
 	var kk int64 = 0
 	for i := 0; i < b.N; i++ {
