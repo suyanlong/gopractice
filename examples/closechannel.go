@@ -1,15 +1,15 @@
 /*
 	How To Close Channels in Golang Elegantly
- */
+*/
 
 package main
 
 import (
-	"time"
-	"math/rand"
-	"sync"
 	"log"
+	"math/rand"
 	"strconv"
+	"sync"
+	"time"
 )
 
 func main() {

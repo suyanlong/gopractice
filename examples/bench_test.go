@@ -1,9 +1,9 @@
 package main
 
 import (
-	"testing"
 	"sync"
 	"sync/atomic"
+	"testing"
 )
 
 func BenchmarkTest_SyncMap(b *testing.B) {
