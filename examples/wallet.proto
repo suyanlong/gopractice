@@ -1,0 +1,10 @@
+syntax = "proto3";
+import "example.proto";
+package proto;
+message Wallet {
+	int64 minFee = 1;
+	string dbPath = 2;
+	Test test = 3;
+}
+
+//protoc --go_out=. example.proto wallet.proto

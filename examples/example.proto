@@ -5,3 +5,6 @@ message Test {
     int32 type = 2;
     int64 reps = 3;
 }
+
+
+//protoc --go_out=. example.proto wallet.proto
