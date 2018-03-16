@@ -5,10 +5,17 @@ import "fmt"
 func main() {
 	parent := Parent{name: "suyanlong"}
 	parent.Hello()
-
 	var child Name
 	child = &Child{parent}
 	child.Hello()
+	goroutine()
+}
+
+func goroutine() {
+	//quit := make(chan int)
+	//quit <- 2   无缓存的通道是一直阻塞的。
+	fmt.Println("end")
+	//<-quit
 }
 
 type Name interface {
