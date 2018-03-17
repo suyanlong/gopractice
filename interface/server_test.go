@@ -1,4 +1,4 @@
-package server
+package _interface
 
 import "testing"
 
