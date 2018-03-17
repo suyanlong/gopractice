@@ -14,7 +14,7 @@ func goroutine() {
 	if err != nil {
 		return
 	}
-	
+
 	client := natpmp.NewClient(gatewayIP)
 	response, err := client.GetExternalAddress()
 	if err != nil {

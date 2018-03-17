@@ -1,14 +1,14 @@
 package udp
 
 import (
-	"testing"
 	"sync"
+	"testing"
 	"time"
 )
 
 func TestSendUdpData(t *testing.T) {
 	t.Log("listener")
-	
+
 	wg := sync.WaitGroup{}
 	go func() {
 		wg.Add(1)
@@ -16,7 +16,7 @@ func TestSendUdpData(t *testing.T) {
 		t.Log("listener1212")
 		wg.Done()
 	}()
-	
+
 	time.Sleep(1 * time.Second)
 	LisenterUdpData()
 	wg.Wait()

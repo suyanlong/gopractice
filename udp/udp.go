@@ -1,8 +1,8 @@
 package udp
 
 import (
-	"net"
 	"fmt"
+	"net"
 	"time"
 )
 
@@ -16,8 +16,9 @@ func sendUdpData() {
 		fmt.Println("send data")
 		time.Sleep(1 * time.Second)
 	}
-	
+
 	defer udpConn.Close()
+
 }
 
 func LisenterUdpData() {
@@ -26,13 +27,13 @@ func LisenterUdpData() {
 	if err != nil {
 		fmt.Printf("udp dial err %v", err)
 	}
-	
+
 	data := make([]byte, 1024)
 	for {
 		udpConn.Read(data)
 		fmt.Println(string(data))
 	}
-	
+
 	fmt.Println("LisenterUdpData end! ")
 	defer udpConn.Close()
 }

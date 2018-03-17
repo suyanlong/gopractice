@@ -1,5 +1,5 @@
 syntax = "proto3";
-import "example.proto";
+import "proto/example.proto";
 package proto;
 message Wallet {
 	int64 minFee = 1;

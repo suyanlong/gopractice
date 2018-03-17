@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
-import "strconv"
+import (
+	"fmt"
+	"strconv"
+	"testing"
+)
 
-func main() {
+func TestError(t *testing.T) {
 	// error := 10;
 	if vdk := 100; vdk > 10 && vdk > 99 {
 		fmt.Println("ok")

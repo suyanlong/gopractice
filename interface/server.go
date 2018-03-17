@@ -1,8 +1,8 @@
 package _interface
 
 import (
-	"io"
 	"fmt"
+	"io"
 )
 
 ///匿名接口，匿名结构体组合，都值得推敲

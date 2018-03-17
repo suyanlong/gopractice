@@ -20,8 +20,6 @@ func main() {
 	}
 }
 
-
-
 func main() {
 
 	parent := Parent{name: "suyanlong"}

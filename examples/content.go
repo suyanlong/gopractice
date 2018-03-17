@@ -14,15 +14,6 @@ import (
 //Context的Value相关方法应该传递必须的数据，不要什么数据都使用这个传递
 //Context是县城安全的，可以放心的在多个goroutine中传递
 
-func main() {
-	//context1()
-	//context2()
-
-	//context3()
-	ExampleWithTimeout()
-
-}
-
 func ExampleWithTimeout() {
 	// Pass a context with a timeout to tell a blocking function that it
 	// should abandon its work after the timeout elapses.

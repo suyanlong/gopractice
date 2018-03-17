@@ -2,7 +2,6 @@ package _interface
 
 import "fmt"
 
-
 type Name interface {
 	GetFirstName() string
 	GetLastName() string
