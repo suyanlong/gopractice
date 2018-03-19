@@ -11,8 +11,10 @@ dep: ## Get the dependencies
 	@go get -u github.com/golang/lint/golint
 	@go get -u gopkg.in/alecthomas/gometalinter.v2
 	@gometalinter.v2 -i
+	@cp ./.hook/pre-commit .git/hooks/
 
 build: ## Build the binary file
+	@cp ./.hook/pre-commit .git/hooks/
 	@go build -v -o $(APP)
 
 release: ## Build the binary file
