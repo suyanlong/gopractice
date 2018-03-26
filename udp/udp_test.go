@@ -1,24 +1,24 @@
 package udp
 
 import (
+	"fmt"
+	"net"
 	"sync"
 	"testing"
 	"time"
-	"fmt"
-	"net"
 )
 
 func TestSendUdpData(t *testing.T) {
-	t.Log("listener")
-	
+	fmt.Println("listener")
+
 	wg := sync.WaitGroup{}
 	go func() {
 		wg.Add(1)
 		sendUdpData()
-		t.Log("listener1212")
+		fmt.Println("listener1212")
 		wg.Done()
 	}()
-	
+
 	time.Sleep(1 * time.Second)
 	LisenterUdpData()
 	wg.Wait()
@@ -29,6 +29,6 @@ func TestResolveUdpaddr(t *testing.T) {
 	if err != nil {
 		fmt.Println("error:", err)
 	}
-	
+
 	fmt.Println(udpcConn.String())
 }

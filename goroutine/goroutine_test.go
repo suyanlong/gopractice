@@ -14,6 +14,6 @@ func BenchmarkGo(b *testing.B) {
 		go func() {
 			time.Sleep(time.Microsecond * 1000)
 		}()
-		
+
 	}
 }
